@@ -1,0 +1,42 @@
+body {
+    margin: 0;
+    background-image: url("images/background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    background-color: transparent;
+    min-height: 100vh;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.task_taps {
+    display: flex;
+    border-bottom: 1px solid lightgray;
+    position: relative;
+}
+
+.task_taps div {
+    padding: 1em;
+}
+
+.task_area {
+    border: 1px solid lightgray;
+}
+
+#under_line {
+    height: 4px;
+    background-color: lightcoral;
+    position: absolute;
+    width: 80px;
+    left: 0px;
+    top: 52px;
+    padding: 0px;
+}
+
+.tasks_button {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
