@@ -15,11 +15,12 @@ add_button.addEventListener("click", addTask); // 작동 안 됐던 이유 : L10
 function addTask() {
     let taskContent = task_input.value ; // 여기가 이상한데... 배열에 왜 할당이 안되노
     task_list.push(taskContent);
-    console.log(task_list)
+    console.log(task_list);
+    render();
 }
 
 function render() {
-    let resultHTML = ''
+    let resultHTML = "" ;
     for(let i=0; i<task_list.length; i++){
         resultHTML += `<div class="task_list">
                 <div>${task_list[i]}</div> 
@@ -33,3 +34,4 @@ function render() {
     document.getElementById("task_board").innerHTML = resultHTML ;
     
 }
+
