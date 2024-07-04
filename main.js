@@ -34,7 +34,7 @@ function render() { // 그럼 그려주는 함수 전부 여기로~
             <div class="task_done">${task_list[i].taskContent}</div> 
             <div>
                 <button onclick="toggleComplete('${task_list[i].id}')">check</button>
-                <button>delete</button>
+                <button onclick="deleteTask('${task_list[i].id}')">delete</button>
             </div>
         </div>`;
         } else{
@@ -42,7 +42,7 @@ function render() { // 그럼 그려주는 함수 전부 여기로~
                 <div>${task_list[i].taskContent}</div> 
                 <div>
                     <button onclick="toggleComplete('${task_list[i].id}')">check</button>
-                    <button>delete</button>
+                    <button onclick="deleteTask('${task_list[i].id}')">delete</button>
                 </div>
             </div>`
         } 
@@ -55,7 +55,7 @@ function render() { // 그럼 그려주는 함수 전부 여기로~
 function toggleComplete(id) { // 함수한테 어떤 아이템을 선택했는지 알려줘야함
     for(let i=0; i<task_list.length; i++){
         if(task_list[i].id == id){
-            task_list[i].isComplete=true;
+            task_list[i].isComplete=!task_list[i].isComplete; // ! = not (부정)
             break; //찾고나면 for문 끝내세욤
     }
 }
@@ -67,4 +67,13 @@ console.log(task_list)
 
 function randomID() {
     return '_' + Math.random().toString(36).substr(2,9); // 이 함수의 결과물이 다른 곳에 쓰일 때 return!!
+}
+
+function deleteTask(id) {
+    for(let i=0; i<task_list.length; i++){
+        if(task_list[i].id == id)
+            task_list.splice(i,1)//i번째 1개만 삭제요
+        break;
+    }
+ render()
 }
