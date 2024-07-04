@@ -58,9 +58,10 @@ function toggleComplete(id) { // 함수한테 어떤 아이템을 선택했는�
             task_list[i].isComplete=true;
             break; //찾고나면 for문 끝내세욤
     }
-    render(); // 값만 바꾸면 안되고 UI 업뎃도 해줘야함
-    console.log(task_list)
 }
+render(); // 값만 바꾸면 안되고 UI 업뎃도 해줘야함
+console.log(task_list)
+
 }
 
 
