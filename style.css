@@ -16,12 +16,12 @@ body {
     margin-top: 2em;
 }
 
-.task_taps {
+.task_tabs {
     display: flex;
     position: relative;
 }
 
-.task_taps div {
+.task_tabs div {
     padding: 1em;
     border-bottom: 1px solid lightgray;
 }
@@ -34,6 +34,7 @@ body {
     left: 0px;
     top: 55px;
     padding: 0px;
+    transition: 0.5s;
 }
 
 .task_list {
@@ -44,4 +45,9 @@ body {
 
 .task_done {
     text-decoration: line-through;
+}
+
+
+.task_tabs div {
+    cursor: pointer;
 }
