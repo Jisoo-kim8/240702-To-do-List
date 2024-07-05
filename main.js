@@ -43,7 +43,6 @@ function addTask() {
     };
     task_list.push(task); 
     console.log(task_list);
-if 
     render();
 }
 
